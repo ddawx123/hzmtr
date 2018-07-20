@@ -15,7 +15,7 @@ var line1_T13 = new Terminal('闸弄口');
 var line1_T14 = new Terminal('打铁关');
 var line1_T15 = new Terminal('西湖文化广场');
 var line1_T16 = new Terminal('武林广场');
-var line1_T17 = new Terminal('凤起路');
+var line1_T17 = new Terminal('凤起路');//换乘站
 var line1_T18 = new Terminal('龙翔桥');
 var line1_T19 = new Terminal('定安路');
 var line1_T20 = new Terminal('城站');
@@ -44,7 +44,7 @@ var line1plus_T14 = new Terminal('闸弄口');
 var line1plus_T15 = new Terminal('打铁关');
 var line1plus_T16 = new Terminal('西湖文化广场');
 var line1plus_T17 = new Terminal('武林广场');
-var line1plus_T18 = new Terminal('凤起路');
+var line1plus_T18 = new Terminal('凤起路');//换乘站
 var line1plus_T19 = new Terminal('龙翔桥');
 var line1plus_T20 = new Terminal('定安路');
 var line1plus_T21 = new Terminal('城站');
@@ -55,14 +55,53 @@ var line1plus_T25 = new Terminal('滨和路');
 var line1plus_T26 = new Terminal('西兴');
 var line1plus_T27 = new Terminal('滨康路');
 var line1plus_T28 = new Terminal('湘湖');
+//二号线
+var line2_T1 = new Terminal('良渚');
+var line2_T2 = new Terminal('杜甫村');
+var line2_T3 = new Terminal('白洋');
+var line2_T4 = new Terminal('金家渡');
+var line2_T5 = new Terminal('墩祥街');
+var line2_T6 = new Terminal('三墩');
+var line2_T7 = new Terminal('虾龙圩');
+var line2_T8 = new Terminal('三坝');
+var line2_T9 = new Terminal('文新');
+var line2_T10 = new Terminal('丰潭路');
+var line2_T11 = new Terminal('古翠路');
+var line2_T12 = new Terminal('学院路');
+var line2_T13 = new Terminal('沈塘桥');
+var line2_T14 = new Terminal('武林门');
+var line2_T15 = new Terminal('凤起路');//换乘站
+var line2_T16 = new Terminal('中河北路');
+var line2_T17 = new Terminal('建国北路');
+var line2_T18 = new Terminal('庆菱路');
+var line2_T19 = new Terminal('庆春广场');
+var line2_T20 = new Terminal('钱江路');//换乘站
+var line2_T21 = new Terminal('钱江世纪城');
+var line2_T22 = new Terminal('盈丰路');
+var line2_T23 = new Terminal('飞虹路');
+var line2_T24 = new Terminal('振宁路');
+var line2_T25 = new Terminal('建设三路');
+var line2_T26 = new Terminal('建设一路');
+var line2_T27 = new Terminal('人民广场');
+var line2_T28 = new Terminal('杭发厂');
+var line2_T29 = new Terminal('人民路');
+var line2_T30 = new Terminal('潘水');
+var line2_T31 = new Terminal('曹家桥');
+var line2_T32 = new Terminal('朝阳');
+//四号线
+var line4_T1 = new Terminal('尚未添加数据');
 
 //每条路线站点
 var line1Terminals = [line1_T1, line1_T2, line1_T3, line1_T4, line1_T5, line1_T6, line1_T7, line1_T8, line1_T9, line1_T10, line1_T11, line1_T12, line1_T13, line1_T14, line1_T15, line1_T16, line1_T17, line1_T18, line1_T19, line1_T20, line1_T21, line1_T22, line1_T23, line1_T24, line1_T25, line1_T26];
 var line1plusTerminals = [line1plus_T1, line1plus_T2, line1plus_T3, line1plus_T4, line1plus_T5, line1plus_T6, line1plus_T7, line1_T7, line1plus_T9, line1plus_T10, line1plus_T11, line1plus_T12, line1plus_T13, line1plus_T14, line1plus_T15, line1plus_T16, line1plus_T17, line1plus_T18, line1plus_T19, line1plus_T20, line1plus_T21, line1plus_T22, line1plus_T23, line1plus_T24, line1plus_T25, line1plus_T26, line1plus_T27, line1plus_T28];
+var line2Terminals = [line2_T1, line2_T2, line2_T3, line2_T4, line2_T5, line2_T6, line2_T7, line2_T8, line2_T9, line2_T10, line2_T11, line2_T12, line2_T13, line2_T14, line1_T17, line2_T16, line2_T17, line2_T18, line2_T19, line2_T20, line2_T21, line2_T22, line2_T23, line2_T24, line2_T25, line2_T26, line2_T27, line2_T28, line2_T29, line2_T30, line2_T31, line2_T32];
+var line4Terminals = [line4_T1];
 
 //各条路线
-var line1 = new Line(line1Terminals, '一号线（临平方向）');
-var line1plus = new Line(line1plusTerminals, '一号线（下沙方向）');
+var line1 = new Line(line1Terminals, '一号线（湘湖-临平）');
+var line1plus = new Line(line1plusTerminals, '一号线（湘湖-下沙江滨）');
+var line2 = new Line(line2Terminals, '二号线（良渚-朝阳）')
+var line4 = new Line(line4Terminals, '四号线（彭埠-浦沿）');
 
 //初始化数据
 var initData = function() {
@@ -176,7 +215,7 @@ $.ajax({
  */
 function initApp() {
     metro = new MTR('杭州地铁');
-    metro.addLines([line1, line1plus]);
+    metro.addLines([line1, line1plus, line2, line4]);
     initData();
     initEvent();
 }
