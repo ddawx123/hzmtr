@@ -209,7 +209,6 @@ var line1plusTerminals = [
     line1_T17,
     line1plus_T19,
     line1plus_T20,
-    line1_T20,
     line1plus_T22,
     line1_T21,
     line1plus_T24,
