@@ -148,6 +148,16 @@ var line5_T37 = new Terminal('通惠路');
 var line5_T38 = new Terminal('火车南站');
 var line5_T39 = new Terminal('新城路');
 var line5_T40 = new Terminal('香樟路');
+//杭绍城际
+var lineHS_T1 = new Terminal('香樟路');//换乘站
+var lineHS_T2 = new Terminal('衙前');
+var lineHS_T3 = new Terminal('杨汛桥');
+var lineHS_T4 = new Terminal('钱清');
+var lineHS_T5 = new Terminal('柯桥西站');
+var lineHS_T6 = new Terminal('湖安路');
+var lineHS_T7 = new Terminal('稽山路');
+var lineHS_T8 = new Terminal('柯华路');
+var lineHS_T9 = new Terminal('笛扬路');//换乘站
 
 //每条路线站点
 var line1Terminals = [
@@ -304,6 +314,17 @@ var line5Terminals = [
     line5_T39,
     line5_T40
 ];
+var lineHSTerminals = [
+    line5_T40,
+    lineHS_T2,
+    lineHS_T3,
+    lineHS_T4,
+    lineHS_T5,
+    lineHS_T6,
+    lineHS_T7,
+    lineHS_T8,
+    lineHS_T9
+];
 
 //各条路线
 var line1 = new Line(line1Terminals, '一号线（湘湖-临平）');
@@ -311,6 +332,7 @@ var line1plus = new Line(line1plusTerminals, '一号线（湘湖-下沙江滨）
 var line2 = new Line(line2Terminals, '二号线（良渚-朝阳）')
 var line4 = new Line(line4Terminals, '四号线（彭埠-浦沿）');
 var line5 = new Line(line5Terminals, '五号线（老余杭-香樟路）');
+var lineHS = new Line(lineHSTerminals, '杭绍城际线（香樟路-笛扬路）');
 
 //初始化数据
 var initData = function() {
@@ -424,7 +446,7 @@ $.ajax({
  */
 function initApp() {
     metro = new MTR('杭州地铁');
-    metro.addLines([line1, line1plus, line2, line4, line5]);
+    metro.addLines([line1, line1plus, line2, line4, line5, lineHS]);
     initData();
     initEvent();
 }
