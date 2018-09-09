@@ -20,7 +20,7 @@ var line1_T18 = new Terminal('龙翔桥');
 var line1_T19 = new Terminal('定安路');
 var line1_T20 = new Terminal('城站');
 var line1_T20 = new Terminal('婺江路');
-var line1_T21 = new Terminal('近江');
+var line1_T21 = new Terminal('近江');//换乘站
 var line1_T22 = new Terminal('江陵路');
 var line1_T23 = new Terminal('滨和路');
 var line1_T24 = new Terminal('西兴');
@@ -49,7 +49,7 @@ var line1plus_T19 = new Terminal('龙翔桥');
 var line1plus_T20 = new Terminal('定安路');
 var line1plus_T21 = new Terminal('城站');
 var line1plus_T22 = new Terminal('婺江路');
-var line1plus_T23 = new Terminal('近江');
+var line1plus_T23 = new Terminal('近江');//换乘站
 var line1plus_T24 = new Terminal('江陵路');
 var line1plus_T25 = new Terminal('滨和路');
 var line1plus_T26 = new Terminal('西兴');
@@ -89,13 +89,138 @@ var line2_T30 = new Terminal('潘水');
 var line2_T31 = new Terminal('曹家桥');
 var line2_T32 = new Terminal('朝阳');
 //四号线
-var line4_T1 = new Terminal('尚未添加数据');
+var line4_T1 = new Terminal('彭埠');//换乘站
+var line4_T2 = new Terminal('火车东站');//换乘站
+var line4_T3 = new Terminal('新风');
+var line4_T4 = new Terminal('新塘');
+var line4_T5 = new Terminal('景芳');
+var line4_T6 = new Terminal('钱江路');//换乘站
+var line4_T7 = new Terminal('江锦路');
+var line4_T8 = new Terminal('市民中心');
+var line4_T9 = new Terminal('城星路');
+var line4_T10 = new Terminal('近江');//换乘站
+var line4_T11 = new Terminal('甬江路');
+var line4_T12 = new Terminal('南星桥');
+var line4_T13 = new Terminal('复兴路');
+var line4_T14 = new Terminal('水澄桥');
+var line4_T15 = new Terminal('联庄');
+var line4_T16 = new Terminal('中医药大学');
+var line4_T17 = new Terminal('杨家墩');
+var line4_T18 = new Terminal('浦沿');
 
 //每条路线站点
-var line1Terminals = [line1_T1, line1_T2, line1_T3, line1_T4, line1_T5, line1_T6, line1_T7, line1_T8, line1_T9, line1_T10, line1_T11, line1_T12, line1_T13, line1_T14, line1_T15, line1_T16, line1_T17, line1_T18, line1_T19, line1_T20, line1_T21, line1_T22, line1_T23, line1_T24, line1_T25, line1_T26];
-var line1plusTerminals = [line1plus_T1, line1plus_T2, line1plus_T3, line1plus_T4, line1plus_T5, line1plus_T6, line1plus_T7, line1_T7, line1plus_T9, line1plus_T10, line1plus_T11, line1plus_T12, line1plus_T13, line1plus_T14, line1plus_T15, line1plus_T16, line1plus_T17, line1plus_T18, line1plus_T19, line1plus_T20, line1plus_T21, line1plus_T22, line1plus_T23, line1plus_T24, line1plus_T25, line1plus_T26, line1plus_T27, line1plus_T28];
-var line2Terminals = [line2_T1, line2_T2, line2_T3, line2_T4, line2_T5, line2_T6, line2_T7, line2_T8, line2_T9, line2_T10, line2_T11, line2_T12, line2_T13, line2_T14, line1_T17, line2_T16, line2_T17, line2_T18, line2_T19, line2_T20, line2_T21, line2_T22, line2_T23, line2_T24, line2_T25, line2_T26, line2_T27, line2_T28, line2_T29, line2_T30, line2_T31, line2_T32];
-var line4Terminals = [line4_T1];
+var line1Terminals = [
+    line1_T1,
+    line1_T2,
+    line1_T3,
+    line1_T4,
+    line1_T5,
+    line1_T6,
+    line1_T7,
+    line1_T8,
+    line1_T9,
+    line1_T10,
+    line1_T11,
+    line1_T12,
+    line1_T13,
+    line1_T14,
+    line1_T15,
+    line1_T16,
+    line1_T17,
+    line1_T18,
+    line1_T19,
+    line1_T20,
+    line1_T21,
+    line1_T22,
+    line1_T23,
+    line1_T24,
+    line1_T25,
+    line1_T26
+];
+var line1plusTerminals = [
+    line1plus_T1,
+    line1plus_T2,
+    line1plus_T3,
+    line1plus_T4,
+    line1plus_T5,
+    line1plus_T6,
+    line1plus_T7,
+    line1_T7,
+    line1plus_T9,
+    line1plus_T10,
+    line1plus_T11,
+    line1plus_T12,
+    line1_T12,
+    line1plus_T14,
+    line1plus_T15,
+    line1plus_T16,
+    line1plus_T17,
+    line1_T17,
+    line1plus_T19,
+    line1plus_T20,
+    line1plus_T21,
+    line1plus_T22,
+    line1_T21,
+    line1plus_T24,
+    line1plus_T25,
+    line1plus_T26,
+    line1plus_T27,
+    line1plus_T28
+];
+var line2Terminals = [
+    line2_T1,
+    line2_T2,
+    line2_T3,
+    line2_T4,
+    line2_T5,
+    line2_T6,
+    line2_T7,
+    line2_T8,
+    line2_T9,
+    line2_T10,
+    line2_T11,
+    line2_T12,
+    line2_T13,
+    line2_T14,
+    line1_T17,
+    line2_T16,
+    line2_T17,
+    line2_T18,
+    line2_T19,
+    line2_T20,
+    line2_T21,
+    line2_T22,
+    line2_T23,
+    line2_T24,
+    line2_T25,
+    line2_T26,
+    line2_T27,
+    line2_T28,
+    line2_T29,
+    line2_T30,
+    line2_T31,
+    line2_T32
+];
+var line4Terminals = [
+    line4_T1,
+    line1_T12,
+    line4_T3,
+    line4_T4,
+    line4_T5,
+    line2_T20,
+    line4_T7,
+    line4_T8,
+    line4_T9,
+    line1_T21,
+    line4_T11,
+    line4_T12,
+    line4_T13,
+    line4_T14,
+    line4_T15,
+    line4_T16,
+    line4_T17,
+    line4_T18
+];
 
 //各条路线
 var line1 = new Line(line1Terminals, '一号线（湘湖-临平）');
