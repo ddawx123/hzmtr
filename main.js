@@ -12,19 +12,19 @@ var line1_T10 = new Terminal('七堡');
 var line1_T11 = new Terminal('彭埠');
 var line1_T12 = new Terminal('火车东站');
 var line1_T13 = new Terminal('闸弄口');
-var line1_T14 = new Terminal('打铁关');
+var line1_T14 = new Terminal('打铁关');//换乘站
 var line1_T15 = new Terminal('西湖文化广场');
 var line1_T16 = new Terminal('武林广场');
 var line1_T17 = new Terminal('凤起路');//换乘站
 var line1_T18 = new Terminal('龙翔桥');
 var line1_T19 = new Terminal('定安路');
-var line1_T20 = new Terminal('城站');
+var line1_T20 = new Terminal('城站');//换乘站
 var line1_T20 = new Terminal('婺江路');
 var line1_T21 = new Terminal('近江');//换乘站
 var line1_T22 = new Terminal('江陵路');
 var line1_T23 = new Terminal('滨和路');
 var line1_T24 = new Terminal('西兴');
-var line1_T25 = new Terminal('滨康路');
+var line1_T25 = new Terminal('滨康路');//换乘站
 var line1_T26 = new Terminal('湘湖');
 //一号线支线
 var line1plus_T1 = new Terminal('下沙江滨');
@@ -193,19 +193,19 @@ var line1plusTerminals = [
     line1plus_T12,
     line1_T12,
     line1plus_T14,
-    line1plus_T15,
+    line1_T14,
     line1plus_T16,
     line1plus_T17,
     line1_T17,
     line1plus_T19,
     line1plus_T20,
-    line1plus_T21,
+    line1_T20,
     line1plus_T22,
     line1_T21,
     line1plus_T24,
     line1plus_T25,
     line1plus_T26,
-    line1plus_T27,
+    line1_T25,
     line1plus_T28
 ];
 var line2Terminals = [
@@ -274,7 +274,7 @@ var line5Terminals = [
     line5_T9,
     line5_T10,
     line5_T11,
-    line5_T12,
+    line2_T8,
     line5_T13,
     line5_T14,
     line5_T15,
@@ -283,21 +283,21 @@ var line5Terminals = [
     line5_T18,
     line5_T19,
     line5_T20,
-    line5_T21,
+    line1_T14,
     line5_T22,
-    line5_T23,
+    line2_T17,
     line5_T24,
-    line5_T25,
+    line1_T20,
     line5_T26,
     line5_T27,
-    line5_T28,
+    line4_T12,
     line5_T29,
     line5_T30,
     line5_T31,
-    line5_T32,
+    line1_T25,
     line5_T33,
     line5_T34,
-    line5_T35,
+    line2_T27,
     line5_T36,
     line5_T37,
     line5_T38,
