@@ -111,45 +111,45 @@ var line4_T18 = new Terminal('浦沿');
 var line5_T1 = new Terminal('老余杭');
 var line5_T2 = new Terminal('金星路');
 var line5_T3 = new Terminal('绿汀路');
-var line5_T4 = new Terminal('创新路');
-var line5_T5 = new Terminal('中央公园');
-var line5_T6 = new Terminal('仓前');
-var line5_T7 = new Terminal('杭师大');
-var line5_T8 = new Terminal('常二路');
+var line5_T4 = new Terminal('葛巷');
+var line5_T5 = new Terminal('创景路');
+var line5_T6 = new Terminal('良睦路');
+var line5_T7 = new Terminal('杭师大仓前校区');
+var line5_T8 = new Terminal('永福');
 var line5_T9 = new Terminal('五常');
 var line5_T10 = new Terminal('蒋村');
 var line5_T11 = new Terminal('浙大紫金港');
 var line5_T12 = new Terminal('三坝');//换乘站
-var line5_T13 = new Terminal('益乐路');
-var line5_T14 = new Terminal('莫干山路');
-var line5_T15 = new Terminal('巨州路');
-var line5_T16 = new Terminal('上塘路');
-var line5_T17 = new Terminal('沈半路');
-var line5_T18 = new Terminal('再行路');
-var line5_T19 = new Terminal('东新园');
-var line5_T20 = new Terminal('城市之星');
+var line5_T13 = new Terminal('萍水街');
+var line5_T14 = new Terminal('和睦');
+var line5_T15 = new Terminal('大运河');
+var line5_T16 = new Terminal('拱宸桥东');
+var line5_T17 = new Terminal('善贤');
+var line5_T18 = new Terminal('西文街');
+var line5_T19 = new Terminal('香积寺路');
+var line5_T20 = new Terminal('杭氧');
 var line5_T21 = new Terminal('打铁关');//换乘站
 var line5_T22 = new Terminal('宝善桥');
 var line5_T23 = new Terminal('建国北路');//换乘站
-var line5_T24 = new Terminal('平海路');
+var line5_T24 = new Terminal('万安桥');
 var line5_T25 = new Terminal('城站');//换乘站
 var line5_T26 = new Terminal('江城路');
-var line5_T27 = new Terminal('候潮路');
+var line5_T27 = new Terminal('候潮门');
 var line5_T28 = new Terminal('南星桥');//换乘站
-var line5_T29 = new Terminal('长河路');
-var line5_T30 = new Terminal('江虹路西');
+var line5_T29 = new Terminal('长河');
+var line5_T30 = new Terminal('聚才路');
 var line5_T31 = new Terminal('江晖路');
 var line5_T32 = new Terminal('滨康路');//换乘站
-var line5_T33 = new Terminal('青年路');
+var line5_T33 = new Terminal('博奥路');
 var line5_T34 = new Terminal('金鸡路');
 var line5_T35 = new Terminal('人民广场');//换乘站
-var line5_T36 = new Terminal('育才路');
-var line5_T37 = new Terminal('通惠路');
+var line5_T36 = new Terminal('育才北路');
+var line5_T37 = new Terminal('通惠中路');
 var line5_T38 = new Terminal('火车南站');
-var line5_T39 = new Terminal('新城路');
-var line5_T40 = new Terminal('香樟路');
+var line5_T39 = new Terminal('双桥站');
+var line5_T40 = new Terminal('姑娘桥');
 //杭绍城际
-var lineHS_T1 = new Terminal('香樟路');//换乘站
+var lineHS_T1 = new Terminal('姑娘桥');//换乘站
 var lineHS_T2 = new Terminal('衙前');
 var lineHS_T3 = new Terminal('杨汛桥');
 var lineHS_T4 = new Terminal('钱清');
@@ -427,14 +427,14 @@ $.ajax({
             initApp();
         }
         else {
-            $('#sso_status').html('您尚未登录，<a href="https://passport.dingstudio.cn/sso/login?returnUrl=' + encodeURIComponent(window.location.href) + '">点此</a>登录。');
+            $('#sso_status').html('您尚未登录，<a href="https://passport.dingstudio.cn/sso/login?returnUrl=' + btoa(encodeURIComponent(window.location.href)) + '">点此</a>登录。');
             initApp();
             //是否强制要求登录
             //window.location.href = 'https://passport.dingstudio.cn/sso/login?returnUrl=' + encodeURIComponent(window.location.href);
         }
     },
     error: function (e) {
-        $('#sso_status').html('通信延迟，暂时无法获取您的登录状态。<a href="https://passport.dingstudio.cn/sso/login?returnUrl=' + encodeURIComponent(window.location.href) + '">点此</a>尝试重新登录！');
+        $('#sso_status').html('通信延迟，暂时无法获取您的登录状态。<a href="https://passport.dingstudio.cn/sso/login?returnUrl=' + btoa(encodeURIComponent(window.location.href)) + '">点此</a>尝试重新登录！');
         initApp();
     }
 });
